@@ -3,17 +3,76 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>words and visuals</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<div>
+	<!-- intro section -->
+	<section id='intro'>
+		<p id='welcome'>Welcome to</p>
+		<p id='title'>Words and Visuals</p>
+		<p id='paragraph'>Here you can customize your own letter and send it to your significant others. It is easy, simple, and fast!</p>
+		<div id='introBtn'>Pick a background</div>
+	</section>
+
+	<!-- nav bar -->
+	<nav>
+		<div id='navbar'>
+			<ul id='navList'>
+				<li>Introduction</li>
+				<li>Background</li>
+				<li>Text</li>
+				<li>Output</li>
+				<li>Games</li>
+			</ul>
+		</div>
+	</nav>
+	<aside id='backToTop'></aside>
+
+	<!-- step1 pick background -->
+	<section id='pickBackground'>
+		<div id='bg-intro'>
+			<h3>Pick a background</h3>
+		</div>
+		<div id='bg-cards'>
+			<div id='bg1' class='bg-card' onmousemove="changeBG(this)" onmouseout="changeBG(body)" onclick="pickBG(this)">Night Sky</div>
+			<div id='bg2' class='bg-card' onmousemove="changeBG(this)" onmouseout="changeBG(body)" onclick="pickBG(this)">River</div>
+			<div id='bg3' class='bg-card' onmousemove="changeBG(this)" onmouseout="changeBG(body)" onclick="pickBG(this)">Sand</div>
+			<div id='bg4' class='bg-card' onmousemove="changeBG(this)" onmouseout="changeBG(body)" onclick="pickBG(this)">Earth</div>
+			<div id='bg5' class='bg-card' onmousemove="changeBG(this)" onmouseout="changeBG(body)" onclick="pickBG(this)">Sun</div>
+		</div>
+		<div id='bgBtn'>Background Picked</div>
+	</section>
+
+	<!-- step2 enter text -->
+	<section id='text'>
+		<h3>Write your letter</h3>
+		<p>
+			note: to change lines, type '/n' in the end of the line.<br>
+			Eg.I want to move to the next line after this./n
+		</p>
+		<textarea id='inputbox' name='letterText'></textarea>
+		<div id='letterBtn' onclick="getText()">Finish</div>
+	</section>
+
+	<!-- step3 output -->
+	<section id='output'>
+		<div id='letter'>
+			<div id='letterContent'></div>
+		</div>
+	</section>
+
+	<!-- BONUS: small game -->
+	<section id='puzzle'></section>
+	<section id='quote'></section>
+	<footer></footer>
+<!-- 	<div>
 		<input id="input" type='text'>
 		<input id="btn1" type='button' value='submit' onclick="myFunction()">
 	</div>
 	<div>
 		<input id="btn2" type='button' value='mouse over' onmouseover="setBGcolor('grey')" onmouseleave="setBGcolor('silver')">
-	</div>
+	</div> -->
 	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>

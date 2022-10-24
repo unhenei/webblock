@@ -1,3 +1,143 @@
-div{
-	display: table-cell;
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+body {
+	overflow: scroll;
+	margin: 0;
+	padding: 0;
+	min-width: 350px;
+	font-family: 'Source Code Pro', monospace;
+	text-align: center;
+	font-size: 1.2em;
+	display: block;
 }
+
+section {
+	margin: 0;
+	height: 100vh;
+	min-height: 600px;
+/*	vertical-align: center;
+	line-height: auto;*/
+}
+
+/*intro*/
+#intro {
+	margin-top: 0;
+	background-image: url('letter.jpg');
+	background-size: cover;
+}
+
+#welcome {
+	padding-top: 100px;
+	font-size: 5rem;
+}
+
+#title {
+	font-family: ;
+	font-size: 5rem;
+}
+
+
+/*nav bar style*/
+#navbar {
+	background-color: #A78B71;
+	color: #583E26;
+	height: 10hz;
+	position: sticky;
+	top: 0;
+}
+
+#navList {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	list-style: none;
+}
+
+#navList li {
+	padding: 20px 15px;
+	font-size: 1.2em;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#navList li:hover {
+	transform: scale(1.1);
+	text-shadow: 0 0 5px white;
+}
+
+/*pick a background*/
+#bg-cards{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.bg-card{
+	width: 250px;
+	height: 300px;
+	border-radius: 5%;
+	margin: 15px;
+	vertical-align: middle;
+	line-height: 300px;
+	box-shadow: 0 0 5px grey;
+	cursor: pointer;
+}
+
+.bg-card:hover{
+	transform: scale(1.05);
+}
+
+#bg1{
+	background-color: #02315E;
+	color: white;
+}
+
+#bg2{
+	background-color: #BBC6C8;
+}
+
+#bg3{
+	background-color: #E5E3E4;
+}
+
+#bg4{
+	background-color: #DDBEAA;
+}
+
+#bg5{
+	background-color: #e5ba84;
+}
+
+
+/*enter text*/
+#text{
+	display: block;
+}
+
+#inputbox {
+	width: 70%;
+	height: 30%;
+}
+
+#letterBtn {
+	padding: 5px;
+}
+
+/*output*/
+#letter, #letterContent{
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	width: 500px;
+	height: 800px;
+	overflow: hidden;
+	padding: 10px 10px;
+}
+
+#letterContent{
+	text-align: left;
+	line-height: 40px;
+}
+
+/*div{
+	display: table-cell;
+}*/
