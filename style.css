@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+html{
+	scroll-behavior: smooth;
+}
 
 body {
 	overflow: scroll;
@@ -11,17 +14,26 @@ body {
 	display: block;
 }
 
-section {
+* {
 	margin: 0;
+}
+
+section {
 	height: 100vh;
-	min-height: 600px;
+	min-height: 400px;
+	padding-top: 20vh;
 /*	vertical-align: center;
 	line-height: auto;*/
 }
 
+a {
+	text-decoration: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
 /*intro*/
 #intro {
-	margin-top: 0;
 	background-image: url('letter.jpg');
 	background-size: cover;
 }
@@ -42,9 +54,8 @@ section {
 	background-color: #A78B71;
 	color: #583E26;
 	height: 10hz;
-	position: sticky;
-	top: 0;
-}
+/*	overflow: hidden;
+*/}
 
 #navList {
 	display: flex;
@@ -63,6 +74,42 @@ section {
 #navList li:hover {
 	transform: scale(1.1);
 	text-shadow: 0 0 5px white;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) 
+.sticky + .content {
+  padding-top: 60px;
+}*/
+
+#topBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: silver; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  height: 50px;
+  width: 50px;
+  border-radius: 50%; /* Rounded corners */
+  font-family: 'Source Code Pro', monospace;
+  text-align: center;
+  font-size: 1em;
+}
+
+#topBtn:hover {
+  background-color: dimgrey; /* Add a dark-grey background on hover */
 }
 
 /*pick a background*/
@@ -130,12 +177,14 @@ section {
 	width: 500px;
 	height: 800px;
 	overflow: hidden;
-	padding: 10px 10px;
+	padding: 10px 10px 10px 10px;
+	resize: both;
 }
 
 #letterContent{
 	text-align: left;
 	line-height: 40px;
+	resize: both;
 }
 
 /*div{

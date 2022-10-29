@@ -12,22 +12,26 @@
 		<p id='welcome'>Welcome to</p>
 		<p id='title'>Words and Visuals</p>
 		<p id='paragraph'>Here you can customize your own letter and send it to your significant others. It is easy, simple, and fast!</p>
-		<div id='introBtn'>Pick a background</div>
+		<a id='introBtn' href='#pickBackground'>↓ Pick a background ↓</a>
 	</section>
 
 	<!-- nav bar -->
 	<nav>
 		<div id='navbar'>
 			<ul id='navList'>
-				<li>Introduction</li>
-				<li>Background</li>
-				<li>Text</li>
-				<li>Output</li>
-				<li>Games</li>
+				<li ><a href="#intro">Introduction</a></li>
+				<li><a href="#pickBackground">Background</a></li>
+				<li><a href="#text">Text</a></li>
+				<li><a href="#output">Output</a></li>
+				<li><a href="#quote">Quotes</a></li>
 			</ul>
 		</div>
 	</nav>
-	<aside id='backToTop'></aside>
+	<aside id='backToTop'>
+		<div>
+			<button onclick="topFunction()" id="topBtn">Top</button>
+		</div>
+	</aside>
 
 	<!-- step1 pick background -->
 	<section id='pickBackground'>
@@ -41,7 +45,7 @@
 			<div id='bg4' class='bg-card' onmousemove="changeBG(this)" onmouseout="changeBG(body)" onclick="pickBG(this)">Earth</div>
 			<div id='bg5' class='bg-card' onmousemove="changeBG(this)" onmouseout="changeBG(body)" onclick="pickBG(this)">Sun</div>
 		</div>
-		<div id='bgBtn'>Background Picked</div>
+		<a id='bgBtn' href='#text'>↓ Background Picked ↓</a>
 	</section>
 
 	<!-- step2 enter text -->
@@ -51,15 +55,25 @@
 			note: to change lines, type '/n' in the end of the line.<br>
 			Eg.I want to move to the next line after this./n
 		</p>
-		<textarea id='inputbox' name='letterText'></textarea>
-		<div id='letterBtn' onclick="getText()">Finish</div>
+		<textarea id='inputbox' name='letterText'></textarea><br>
+		<a id='letterBtn' href='#output' onclick="getText()">↓ Finish ↓</a>
 	</section>
 
 	<!-- step3 output -->
 	<section id='output'>
+		<p>Your letter is here!</p>
+		<ul>
+			<li>Drag bottom right corner to resize.</li>
+			<li>Screenshot to get your letter.</li>
+		</ul>
+		<div id='layout'>
+			<div id='size'></div>
+			<div id='align'>
+			</div>
+		</div>
 		<div id='letter'>
 			<div id='letterContent'></div>
-		</div>
+		</div>			
 	</section>
 
 	<!-- BONUS: small game -->
