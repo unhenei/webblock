@@ -62,13 +62,22 @@
 	<!-- step3 output -->
 	<section id='output'>
 		<p>Your letter is here!</p>
-		<ul>
+		<ul id='letterInstruc'>
 			<li>Drag bottom right corner to resize.</li>
 			<li>Screenshot to get your letter.</li>
 		</ul>
 		<div id='layout'>
-			<div id='size'></div>
+			<div id='size'>
+				<button id='sizeDown' type="button" value="down" onclick="size('down')">-</button>
+				<p>Font Size</p>
+				<button id='sizeUp' type="button" value="up" onclick="size('up')">+</button>
+			</div>
 			<div id='align'>
+				<p>Alignment: </p>
+				<button id='alignLeft' type="button" value="alignLeft" onclick="alignText(L)">L</button>
+				<button id='alignCenter' type="button" value="alignCenter" onclick="alignText(C)">C</button>
+				<button id='alignRight' type="button" value="alignRight" onclick="alignText(R)">R</button>
+				<button id='alignEql' type="button" value="alignEql" onclick="alignText(E)">E</button>
 			</div>
 		</div>
 		<div id='letter'>

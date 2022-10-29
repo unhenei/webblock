@@ -37,7 +37,6 @@ const changeBG = (e) => {
 const pickBG = (e) => {
 	let color = window.getComputedStyle(e).backgroundColor
 	document.getElementById('letter').style.background = color
-	console.log(color)
 	if (color === 'rgb(2, 49, 94)') {
 		document.getElementById('letter').style.color = 'white'
 	} else {
@@ -47,9 +46,23 @@ const pickBG = (e) => {
 
 const getText = () => {
 	let text =  document.getElementById('inputbox').value;
-	text = text.replaceAll('/n','<br>').replaceAll('/s', '  ');
+	text = text.replaceAll('/n','<br>');
 	document.getElementById('letterContent').innerHTML = text;
 	console.log('work!',text);
+}
+
+const size = (size) => {
+	let letter =  document.getElementById('letterContent');
+	let fontSize = parseInt(window.getComputedStyle(letter).fontSize);
+	if (size === 'down'){
+		if (fontSize > 13) {
+			letter.style.fontSize = (fontSize - 3) + 'px'
+		}
+	} else if (size === 'up'){
+		if (fontSize < 40) {
+			letter.style.fontSize = (fontSize + 3) + 'px'
+		}
+	}
 }
 
 // const generateLetter = () => {

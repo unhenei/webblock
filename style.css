@@ -25,6 +25,10 @@ section {
 /*	vertical-align: center;
 	line-height: auto;*/
 }
+h3, p, a {
+ 	margin-top: 15px;
+ 	margin-bottom: 15px;
+ }
 
 a {
 	text-decoration: inherit;
@@ -54,8 +58,8 @@ a {
 	background-color: #A78B71;
 	color: #583E26;
 	height: 10hz;
-/*	overflow: hidden;
-*/}
+	z-index: 99;
+}
 
 #navList {
 	display: flex;
@@ -84,17 +88,12 @@ a {
   display: block;
 }
 
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) 
-.sticky + .content {
-  padding-top: 60px;
-}*/
-
 #topBtn {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
   bottom: 20px; /* Place the button at the bottom of the page */
   right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
+  z-index: 98; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
   background-color: silver; /* Set a background color */
@@ -170,6 +169,22 @@ a {
 }
 
 /*output*/
+#letterInstruc {
+	text-align: center;
+}
+
+#layout > div {
+	display: inline-block;
+}
+
+#size, #align {
+	margin: 10px;
+}
+
+#size > *, #align > * {
+	display: inline-block;
+}
+
 #letter, #letterContent{
 	position: relative;
 	margin-right: auto;
@@ -179,6 +194,10 @@ a {
 	overflow: hidden;
 	padding: 10px 10px 10px 10px;
 	resize: both;
+}
+
+#letter {
+	background-color: #E5E3E4;
 }
 
 #letterContent{
