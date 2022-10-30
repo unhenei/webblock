@@ -11,7 +11,6 @@ body {
 	font-family: 'Source Code Pro', monospace;
 	text-align: center;
 	font-size: 1.2em;
-	display: block;
 }
 
 * {
@@ -19,13 +18,14 @@ body {
 }
 
 section {
+	display: block;
 	height: 100vh;
-	min-height: 400px;
+	min-height: 800px;
 	padding-top: 20vh;
-/*	vertical-align: center;
-	line-height: auto;*/
 }
+
 h3, p, a {
+	display: block;
  	margin-top: 15px;
  	margin-bottom: 15px;
  }
@@ -34,6 +34,10 @@ a {
 	text-decoration: inherit;
     color: inherit;
     cursor: pointer;
+}
+
+.moveToNext {
+	padding-top: 50px;
 }
 
 /*intro*/
@@ -153,6 +157,9 @@ a {
 	background-color: #e5ba84;
 }
 
+.chosen {
+	border: 2px solid #583E26;
+}
 
 /*enter text*/
 #text{
@@ -162,13 +169,16 @@ a {
 #inputbox {
 	width: 70%;
 	height: 30%;
-}
-
-#letterBtn {
-	padding: 5px;
+	max-height: 60%;
 }
 
 /*output*/
+#output {
+	height: 2hz;
+	min-height: 1000px;
+	background-color: grey;
+}
+
 #letterInstruc {
 	text-align: center;
 }
@@ -189,21 +199,42 @@ a {
 	position: relative;
 	margin-right: auto;
 	margin-left: auto;
-	width: 500px;
-	height: 800px;
 	overflow: hidden;
-	padding: 10px 10px 10px 10px;
 	resize: both;
 }
 
-#letter {
+#letter{
 	background-color: #E5E3E4;
+	max-width: 90%;
+	max-height: 680px;
+	padding: 20px;
 }
 
 #letterContent{
+	max-width: 90%;
+	max-height: 90%;
+	padding: 20px;
 	text-align: left;
 	line-height: 40px;
-	resize: both;
+}
+
+// quote generator
+
+
+#quotePaper{
+	width: 400px;
+	height: auto;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#quote{
+	width: 90%;
+	height: 90%;
+	line-height: 40px;
+	text-align: left;
+	padding: 20px;
 }
 
 /*div{

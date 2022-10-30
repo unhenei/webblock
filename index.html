@@ -12,7 +12,7 @@
 		<p id='welcome'>Welcome to</p>
 		<p id='title'>Words and Visuals</p>
 		<p id='paragraph'>Here you can customize your own letter and send it to your significant others. It is easy, simple, and fast!</p>
-		<a id='introBtn' href='#pickBackground'>↓ Pick a background ↓</a>
+		<a id='introBtn' href='#pickBackground' class='moveToNext'>↓ Pick a background ↓</a>
 	</section>
 
 	<!-- nav bar -->
@@ -45,7 +45,7 @@
 			<div id='bg4' class='bg-card' onmousemove="changeBG(this)" onmouseout="changeBG(body)" onclick="pickBG(this)">Earth</div>
 			<div id='bg5' class='bg-card' onmousemove="changeBG(this)" onmouseout="changeBG(body)" onclick="pickBG(this)">Sun</div>
 		</div>
-		<a id='bgBtn' href='#text'>↓ Background Picked ↓</a>
+		<a id='bgBtn' href='#text' class='moveToNext'>↓ Background Picked ↓</a>
 	</section>
 
 	<!-- step2 enter text -->
@@ -56,12 +56,12 @@
 			Eg.I want to move to the next line after this./n
 		</p>
 		<textarea id='inputbox' name='letterText'></textarea><br>
-		<a id='letterBtn' href='#output' onclick="getText()">↓ Finish ↓</a>
+		<a id='letterBtn' href='#output' onclick="getText()" class='moveToNext'>↓ Finish ↓</a>
 	</section>
 
 	<!-- step3 output -->
 	<section id='output'>
-		<p>Your letter is here!</p>
+		<h3>Your letter is here!</h3>
 		<ul id='letterInstruc'>
 			<li>Drag bottom right corner to resize.</li>
 			<li>Screenshot to get your letter.</li>
@@ -74,10 +74,10 @@
 			</div>
 			<div id='align'>
 				<p>Alignment: </p>
-				<button id='alignLeft' type="button" value="alignLeft" onclick="alignText(L)">L</button>
-				<button id='alignCenter' type="button" value="alignCenter" onclick="alignText(C)">C</button>
-				<button id='alignRight' type="button" value="alignRight" onclick="alignText(R)">R</button>
-				<button id='alignEql' type="button" value="alignEql" onclick="alignText(E)">E</button>
+				<button id='alignLeft' type="button" value="alignLeft" onclick="alignText('L')">L</button>
+				<button id='alignCenter' type="button" value="alignCenter" onclick="alignText('C')">C</button>
+				<button id='alignRight' type="button" value="alignRight" onclick="alignText('R')">R</button>
+				<button id='alignJustified' type="button" value="alignJustified" onclick="alignText('J')">J</button>
 			</div>
 		</div>
 		<div id='letter'>
@@ -85,9 +85,14 @@
 		</div>			
 	</section>
 
-	<!-- BONUS: small game -->
-	<section id='puzzle'></section>
-	<section id='quote'></section>
+	<!-- random quote generator -->
+	<section id='quoteGenerator'>
+		<h3>Get a random quote</h3>
+		<button id='quoteBtn' type="button" value="quoteBtn" onclick="randomQuote()">Generate</button>
+		<div id='quotePaper'>
+			<div id='quote'></div>
+		</div>
+	</section>
 	<footer></footer>
 <!-- 	<div>
 		<input id="input" type='text'>
