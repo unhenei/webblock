@@ -1,3 +1,33 @@
+// slides
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("slides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
 // When the user scrolls the page, execute navTop() and scroll()
 window.onscroll = function() {navTop(); scroll()};
 
@@ -131,7 +161,7 @@ const randomQuote = () => {
 	'Love yourself first, and everything else falls in line. You really have to love yourself to get anything done in this world.<br>- Lucille Ball',
 	'Almost everything will work again if you unplug it for a few minutes, including you.<br>- Anne Lamott',
 	'Nourishing yourself in a way that helps you blossom in the direction you want to go is attainable, and you are worth the effort.<br>- Deborah Day',
-	'LLove yourself enough to set boundaries. Your time and energy are precious. You get to choose how you use it. You teach people how to treat you by deciding what you will and won’t accept.<br>- Anna Taylor',
+	'Love yourself enough to set boundaries. Your time and energy are precious. You get to choose how you use it. You teach people how to treat you by deciding what you will and won’t accept.<br>- Anna Taylor',
 	'We cannot direct the wind, but we can adjust the sails.<br>- Dolly Parton',
 	'Keep good company, read good books, love good things and cultivate soul and body as faithfully as you can.<br>- Louisa May Alcott',
 	'Talk to yourself like you would to someone you love.<br>- Brené Brown',

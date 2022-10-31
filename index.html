@@ -9,10 +9,41 @@
 <body>
 	<!-- intro section -->
 	<section id='intro'>
-		<p id='welcome'>Welcome to</p>
+		<div id='slideshowContainer'>
+			<div id='slide1' class='slides fade'>
+				<p id='welcome'>Welcome to</p>
+				<p id='title'>Words and Visuals</p>
+				<p id='paragraph'>Here you can customize your own letter and send it to your significant others. It is easy, simple, and fast!</p>
+				<a id='introBtn' href='#pickBackground' class='moveToNext'>START</a>
+			</div>
+			<div id='slide2' class='slides fade'>
+				<p class='slideText'>Write your own letters</p>
+				<img alt='example1' src='hogwarts.png'>
+			</div>
+			<div id='slide3' class='slides fade'>
+				<p class='slideText'>Treasure a paragraph from your favorite novel</p>
+				<img alt='example2' src='Pride and Prejudice.png'>
+			</div>
+			<div id='slide4' class='slides fade'>
+				<p class='slideText'>Print the lyrics from your beloved songs</p>
+				<img alt='example3' src='lyrics.png'>
+			</div>
+			<!-- Next and previous buttons -->
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			<!-- The dots/circles -->
+			<div id='tocDots'>
+			  <span class="dot" onclick="currentSlide(1)"></span>
+			  <span class="dot" onclick="currentSlide(2)"></span>
+			  <span class="dot" onclick="currentSlide(3)"></span>
+			  <span class="dot" onclick="currentSlide(4)"></span>
+			</div>
+		</div>
+<!-- 		<p id='welcome'>Welcome to</p>
 		<p id='title'>Words and Visuals</p>
 		<p id='paragraph'>Here you can customize your own letter and send it to your significant others. It is easy, simple, and fast!</p>
-		<a id='introBtn' href='#pickBackground' class='moveToNext'>↓ Pick a background ↓</a>
+		<a id='introBtn' href='#pickBackground' class='moveToNext'>START</a>
+		</div> -->
 	</section>
 
 	<!-- nav bar -->
@@ -20,9 +51,9 @@
 		<div id='navbar'>
 			<ul id='navList'>
 				<li ><a href="#intro">Introduction</a></li>
-				<li><a href="#pickBackground">Background</a></li>
-				<li><a href="#text">Text</a></li>
-				<li><a href="#output">Output</a></li>
+				<li><a href="#pickBackground">Paper</a></li>
+				<li><a href="#text">Write</a></li>
+				<li><a href="#output">YourLetter</a></li>
 				<li><a href="#quote">Quotes</a></li>
 			</ul>
 		</div>
@@ -45,26 +76,25 @@
 			<div id='bg4' class='bg-card' onmousemove="changeBG(this)" onmouseout="changeBG(body)" onclick="pickBG(this)">Earth</div>
 			<div id='bg5' class='bg-card' onmousemove="changeBG(this)" onmouseout="changeBG(body)" onclick="pickBG(this)">Sun</div>
 		</div>
-		<a id='bgBtn' href='#text' class='moveToNext'>↓ Background Picked ↓</a>
+		<a id='bgBtn' href='#text' class='moveToNext'>NEXT</a>
 	</section>
 
 	<!-- step2 enter text -->
 	<section id='text'>
 		<h3>Write your letter</h3>
 		<p>
-			note: to change lines, type '/n' in the end of the line.<br>
+			Note: To change lines, type '/n' in the end of the line.<br>
 			Eg.I want to move to the next line after this./n
 		</p>
 		<textarea id='inputbox' name='letterText'></textarea><br>
-		<a id='letterBtn' href='#output' onclick="getText()" class='moveToNext'>↓ Finish ↓</a>
+		<a id='letterBtn' href='#output' onclick="getText()" class='moveToNext'>NEXT</a>
 	</section>
 
 	<!-- step3 output -->
 	<section id='output'>
 		<h3>Your letter is here!</h3>
-		<ul id='letterInstruc'>
-			<li>Drag bottom right corner to resize.</li>
-			<li>Screenshot to get your letter.</li>
+		<h4>Screenshot to get your letter.</h4>
+		<p id='letterInstruc'>You could only write so much in one piece of paper, if the text is cropped out, try resize your paper or adjust your font size. (Hint: Drag bottom right corner to resize.)</p>
 		</ul>
 		<div id='layout'>
 			<div id='size'>
@@ -82,7 +112,11 @@
 		</div>
 		<div id='letter'>
 			<div id='letterContent'></div>
-		</div>			
+		</div>
+		<p id="msg">Thank you for using our service. I hope you enjoyed the journey.<br>
+		Now go send the letters to your important ones.<br>
+		See you next time.</p>
+		<a id='finishBtn' href='#quoteGenerator' class='moveToNext'>SEE MORE</a>
 	</section>
 
 	<!-- random quote generator -->
@@ -93,14 +127,13 @@
 			<div id='quote'></div>
 		</div>
 	</section>
-	<footer></footer>
-<!-- 	<div>
-		<input id="input" type='text'>
-		<input id="btn1" type='button' value='submit' onclick="myFunction()">
-	</div>
-	<div>
-		<input id="btn2" type='button' value='mouse over' onmouseover="setBGcolor('grey')" onmouseleave="setBGcolor('silver')">
-	</div> -->
+	<footer>
+		<div id="ending">
+			<p>This is a project for Zero To Mastery Hacktoberfest 2022. <a id='endingA' href="https://github.com/unhenei/webblock">Learn More</a></p>
+		</div>
+	</footer>
+
+	<!-- javascript -->
 	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
