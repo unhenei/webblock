@@ -56,7 +56,7 @@ a {
  	display: none;
 }
 
-/* Next & previous buttons */
+/* next & prev buttons */
 .prev, .next {
 	cursor: pointer;
 	position: absolute;
@@ -66,7 +66,7 @@ a {
 	padding: 16px;
 	color: white;
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 1.2em;
 	transition: 0.6s ease;
 	border-radius: 0 3px 3px 0;
 	user-select: none;
@@ -78,12 +78,15 @@ a {
 }
 
 .prev:hover, .next:hover {
-	background-color: rgba(0,0,0,0.8);
+	background-color: rgba(94, 90, 84, 0.5);
 }
 
 /* dots */
 #tocDots{
-	margin-bottom: 20px;
+	position: absolute;
+	bottom: 100px;
+	right: 40%;
+	left: 40%;
 }
 
 .dot {
@@ -91,14 +94,15 @@ a {
 	height: 15px;
 	width: 15px;
 	margin: 0 2px;
-	background-color: #bbb;
+	background-color: white;
+	opacity: .5;
 	border-radius: 50%;
 	display: inline-block;
 	transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-	background-color: #717171;
+	background-color: #5E5A54;
 }
 
 /* Fading animation */
@@ -124,10 +128,18 @@ a {
 }
 
 img{
+	position: absolute;
+	right: 0;
 	max-height: 450px;
+	margin: 45px;
+	animation: fly-to-left 1.2s;
 }
 
 .slideText{
+	position: absolute;
+	bottom: 200px;
+	left: 10%;
+	z-index: 2;
 	max-width: 40%;
 	font-size: 2.5rem;
 	text-align: left;
@@ -135,6 +147,17 @@ img{
 	padding: 5px;
 	padding-left: 10px;
 	max-height: 150px;
+	animation: fly-to-right 1.2s;
+}
+
+@keyframes fly-to-left {
+	from {right: -50%}
+	to {right: 0}
+}
+
+@keyframes fly-to-right {
+	from {left: -40%}
+	to {left: 10%}
 }
 
 /*nav bar style*/

@@ -1,31 +1,33 @@
 // slides
-let slideIndex = 1;
+let slideIndex = 0;
 showSlides(slideIndex);
 
-// Next/previous controls
+// next & prev
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
+// toc dot
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
-  let i;
   let slides = document.getElementsByClassName("slides");
   let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
+  if (n > slides.length) {slideIndex = 0} //after the last slide go back to the firs one
+  if (n < 0) {slideIndex = slides.length} //in plusSlides, when its showSlides(0), make it the last slide
+  //set all slides to 'display: none'
+  for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
+  //set all dots to its orginal form
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  //show current slides and dot
+  slides[slideIndex].style.display = "block";
+  dots[slideIndex].className += " active";
 }
 
 // When the user scrolls the page, execute navTop() and scroll()
