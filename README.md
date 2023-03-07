@@ -11,7 +11,7 @@
 <h2>Limitations and future improvement</h2>
 <p>There are a few things I would like to enhance in the future.</p>
 <h3>Letter Output</h3>
-<p>The letter generator should offer to download the final letter with a button or a right click. However, it might require to use html2canvas library while I wanted to stick to the vanilla code rule. In the end, the letter is generate, but it can only be saved by screenshot not by downloaded, which could be fatal to user experience.</p>
+<p>The letter generator should offer to download the final letter with a button or a right click. However, it might require to use html2canvas library while I wanted to stick to the vanilla code rule. In the end, the letter is generated, but it can only be saved by screenshot not by downloaded, which could be fatal to user experience.</p>
 <p>When download function is done, I would also like to add an email form, where we could just send the user their letter. Not only could we offer users more options for the ouput, if needed, we could also collect user information in the process.</p>
 <h3>Letter Text Input</h3>
 <p>I used <code>textarea</code> for letter input, it returned plain text so the paragraphs got messed up in the letter output section. An editor might be what I was looking for; nonetheless, to keep the code simple, I chose to ask users to create paragraphs manually with asigned words, and turn it into HTML format with a <code>replaceAll()</code> function. In exchange, I built a layout part in the output section where user could change the text alignment and font size. However, adding the asigned word could be painful for users, which definitely could be improved in the future.</p>
